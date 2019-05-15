@@ -1,0 +1,163 @@
+老师，打包的时候axios请求的地址怎么让它自动切换成线上的
+
+--------------------------------------------------------------------------------
+
+ts-class-component
+
+装饰器：
+1.装饰整个类
+2.装饰方法
+3.装饰属性
+
+import {Component} from 'vue-property-decorator';
+
+
+
+
+"装饰器"里面的Vue其实就是Vue
+
+--------------------------------------------------------------------------------
+
+1.data里的东西，全都写成成员属性
+2.methods里的东西，全都写成成员方法
+3.computed里的东西，写成访问器方法
+  computed: {
+    data: {
+      get(){
+        return ;
+      }
+      set(val){
+        this.data=val;
+      }
+    }
+  }
+
+
+  get xxxx(){
+    return ;
+  }
+
+  set xxxx(val){
+    this.xxx=val;
+  }
+
+
+4.属性@Prop
+  //为啥加叹号——没有初始化也不报错
+  @Prop(Number) private a!:number;
+  @Prop([Number,String]) private a!:number|string;
+  @Prop({type: Number, default: 5454, validator(val){
+    if(val%3!=0){
+      return false;
+    }else{
+      return true;
+    }
+  }}) private a!:number;
+
+5.监听@Watch
+  @Watch('啥', {immediate, deep})
+  private async reloadData(){
+    ....
+  }
+
+
+  @Watch('a')
+  @Watch('b')
+  private xxx(){
+
+  }
+
+6.@Emit
+  在方法执行结束之后，顺便给父级发送一个事件
+
+  fn(){
+    //....
+
+    this.$emit('fn', ...);
+  }
+
+  @Emit()
+  fn(){
+    //....
+  }
+
+--------------------------------------------------------------------------------
+
+{{form.password}}
+
+
+data(){
+  return {
+    form: {
+
+    }
+  }
+}
+
+--------------------------------------------------------------------------------
+
+索引签名：
+let a:{[index:string]: xxx}
+
+--------------------------------------------------------------------------------
+
+收获
+1.所有东西都有类型（变量、属性、函数、参数）
+  基础——number、string
+  组件类
+
+  //错的——ts检测不到aaa这个方法
+  @Component({
+    methods: {
+      aaa(){}
+    }
+  })
+  class XXX {}
+
+
+  //正确——
+  @Component
+  class XXX {
+    aaa(){}
+  }
+
+2.import的时候 .ts一定不加、其他文件（.vue、.js）一定要加
+
+  import有两个步骤
+  ts先来处理——如果ts处理失败
+  js来处理
+
+3.判断
+  this.$refs.form.validate()      //错的：因为ref是一个动态的东西，最保险的方式是判断一下类型
+
+  if(this.$refs.form instanceof RegForm){
+    this.$refs.form.validate();
+  }
+
+
+
+  --------------------------------------
+
+  this.$children[0].validate();     //有风险：
+
+  if(this.$children[0] instanceof RegFormItem){
+    this.$children[0].validate();
+  }
+
+
+
+4.特殊类型——索引签名
+  {
+    a: 12,
+    b: 55
+  }
+
+  {[index:string]: number}
+
+5.vue的class组件
+  @Component        必须有
+  @Prop(类型, [], {type: 类型}) private a!:number;
+  @Watch('名字', {immediate, deep})
+
+  get xxx
+  set xxx

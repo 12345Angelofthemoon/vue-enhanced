@@ -1,0 +1,11 @@
+如果大家想使用我写的那个gulp watch的东西，需要做几步操作
+1.安装gulp本身
+> cnpm i -g gulp-cli
+
+2.安装本地依赖库
+> cnpm i
+
+3.运行gulp的watch任务
+>gulp watch
+
+*写的很匆忙，不建议用于项目中，仅作为本课的小工具使用即可

@@ -1,0 +1,20 @@
+{
+  "name": "res",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "tsc 1.ts -t ES2015 --outFile 1.js -d --strict --experimentalDecorators --alwaysStrict --noImplicitAny && node 1.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "gulp": "^4.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-run": "^1.7.1",
+    "gulp-typescript": "^5.0.1",
+    "gulp-watch": "^5.0.1",
+    "typescript": "^3.4.5"
+  }
+}

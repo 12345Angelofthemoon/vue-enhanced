@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    sessionStorage    //会话存储——关闭浏览器消失
+    localStorage      //本地存储——永久
+
+
+    sessionStorage.a=JSON.stringify({a: 12, b: 5});
+
+    ///...
+
+    alert(JSON.parse(sessionStorage.a));    //'{a: 12, b: 5}'
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
