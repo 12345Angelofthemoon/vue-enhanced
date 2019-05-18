@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/reg.css">
+    <link rel="stylesheet" href="css/site-nav.css">
+  </head>
+  <body>
+    <div class="site-nav">
+      <div class="site-nav-page">
+        <div class="site-nav-menu fl">
+          <a href="#" class="site-nav-menu-login fl">亲，请登录</a>
+          <a href="#" class="site-nav-menu-reg fl">免费注册</a>
+        </div>
+        <div class="site-nav-menu fr">
+          <div class="site-nav-menu-container fl">
+            <a href="#" class="site-nav-menu-mytb">
+              我的淘宝
+              <i class="site-nav-arrow">▾</i>
+            </a>
+            <div class="site-nav-menu-list">
+              <a href="#" class="site-nav-menu-list-item">已买到的宝贝</a>
+              <a href="#" class="site-nav-menu-list-item">我的足迹</a>
+            </div>
+          </div>
+          <div class="site-nav-menu-container fl">
+            <a href="#" class="site-nav-menu-cart fl">
+              购物车<span>0</span>
+              <i class="site-nav-arrow">▾</i>
+            </a>
+          </div>
+          <div class="site-nav-menu-container fl">
+            <a href="#" class="site-nav-menu-service">
+              联系客服
+              <i class="site-nav-arrow">▾</i>
+            </a>
+            <div class="site-nav-menu-list">
+              <a href="#" class="site-nav-menu-list-item">消费者客服</a>
+              <a href="#" class="site-nav-menu-list-item">卖家客服</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <header class="reg-header">
+        <h1 class="logo">淘宝网</h1>
+      </header>
+
+      <div class="steps">
+        <div class="step-container">
+          <div class="steps-item steps-active">
+            <i class="step-num">1</i>
+            <span class="">设置用户名</span>
+          </div>
+          <div class="steps-item">
+            <i class="step-num">2</i>
+            <span class="">填写账号信息</span>
+          </div>
+          <div class="steps-item">
+            <i class="step-num">3</i>
+            <span class="">注册成功</span>
+          </div>
+        </div>
+
+        <!-- 用户名 -->
+        <div class="reg-form">
+          <div class="form-item clearfix success">
+            <label class="form-label">手机号</label>
+            <input class="form-control" type="text" placeholder="请输入你的手机号" />
+            <div class="validate-status">
+              <i class="icon"></i>
+              <span class="msg">验证成功</span>
+            </div>
+          </div>
+          <div class="form-item clearfix error">
+            <label class="form-label">电子邮箱</label>
+            <input class="form-control" type="text" placeholder="请输入你的电子邮箱" />
+            <div class="validate-status">
+              <i class="icon"></i>
+              <span class="msg">错误信息</span>
+            </div>
+          </div>
+          <div class="form-item clearfix">
+            <label class="form-label"></label>
+            <button type="button" class="form-control btn-next">下一步</button>
+            <button type="button" class="form-control btn-next disabled">下一步</button>
+          </div>
+        </div>
+
+        <!-- 账号信息 -->
+        <div class="reg-form">
+          <div class="form-item clearfix">
+            <label class="form-label">登录名</label>
+            <div class="">
+              13888888888
+            </div>
+            <!-- <div class="validate-status">
+              <i class="icon"></i>
+              <span class="msg">验证成功</span>
+            </div> -->
+          </div>
+          <div class="form-item clearfix">
+            <label class="form-label">登录密码</label>
+            <input class="form-control" type="text" placeholder="请输入你的密码" />
+            <div class="password-strength">
+              <div class="title clearfix">
+              <!-- <div class="title weak clearfix"> -->
+              <!-- <div class="title middle clearfix"> -->
+              <!-- <div class="title strong clearfix"> -->
+                <span class="label fl">强度：</span>
+                <div class="index fl">
+                  <div class="index-item active fl"></div>
+                  <div class="index-item fl"></div>
+                  <div class="index-item fl"></div>
+                </div>
+                <div class="txt fl">弱</div>
+              </div>
+              <div class="rules">
+                <div class="rule-item clearfix">
+                  <i class="rule-icon success fl">√</i>
+                  <span class="rule-txt fl">6~20个字符</span>
+                </div>
+                <div class="rule-item clearfix">
+                  <i class="rule-icon fl">?</i>
+                  <span class="rule-txt fl">只能包含字母、数字以及标点符号</span>
+                </div>
+                <div class="rule-item clearfix">
+                  <i class="rule-icon fl">?</i>
+                  <span class="rule-txt fl">字母、数字和标点符号至少包含2种</span>
+                </div>
+              </div>
+
+            </div>
+            <!-- <div class="validate-status">
+              <i class="icon"></i>
+              <span class="msg">错误信息</span>
+            </div> -->
+          </div>
+          <div class="form-item clearfix">
+            <label class="form-label">确认密码</label>
+            <input class="form-control" type="text" placeholder="请再次输入你的密码" />
+            <!-- password-strength -->
+            <!-- <div class="validate-status">
+              <i class="icon"></i>
+              <span class="msg">错误信息</span>
+            </div> -->
+          </div>
+          <div class="form-item clearfix">
+            <label class="form-label"></label>
+            <button type="button" class="form-control btn-next">提交</button>
+            <button type="button" class="form-control btn-next disabled">提交</button>
+          </div>
+        </div>
+
+        <!-- 成功 -->
+        <div class="success-form">
+          <img src="imgs/reg-success.png" alt=""/>
+          <div class="txt">注册成功</div>
+          <div class="login-ref-container">
+            <a href="#" class="login-ref">立即登录</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="dialog reg-agreement" style="display:none;">
+      <h3 class="dialog-title">
+        注册协议
+        <a href="javascript:;" class="dialog-close-btn fr">x</a>
+      </h3>
+      <div class="content">
+        <p>【审慎阅读】您在申请注册流程中点击同意前，应当认真阅读以下协议。请您务必审慎阅读、充分理解协议中相关条款内容，其中包括：</p>
+
+        <p>1、与您约定免除或限制责任的条款；</p>
+        <p>2、与您约定法律适用和管辖的条款；</p>
+        <p>3、其他以粗体下划线标识的重要条款。</p>
+        <p>如您对协议有任何疑问，可向平台客服咨询。</p>
+        <p>【特别提示】当您按照注册页面提示填写信息、阅读并同意协议且完成全部注册程序后，即表示您已充分阅读、理解并接受协议的全部内容。如您因平台服务与淘宝发生争议的，适用《淘宝平台服务协议》处理。如您在使用平台服务过程中与其他用户发生争议的，依您与其他用户达成的协议处理。</p>
+        <p>阅读协议的过程中，如果您不同意相关协议或其中任何条款约定，您应立即停止注册程序。</p>
+        <p>淘宝平台服务协议</p>
+        <p>隐私权政策</p>
+        <p>法律声明</p>
+        <p>支付宝及客户端服务协议</p>
+        <button type="button" class="btn-agreement">同意协议</button>
+      </div>
+    </div>
+  </body>
+</html>

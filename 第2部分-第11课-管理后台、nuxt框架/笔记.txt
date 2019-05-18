@@ -1,0 +1,21 @@
+/shop/list?token=xxxx
+
+/shop/list
+headers: {
+  token: 'xxxx'
+}
+
+
+POST /shop/create
+title——名称
+img——图片
+menus——
+  [
+    ['衣服', '/shop?type=yifu'],
+    ['衣服', '/shop?type=yifu'],
+    ['衣服', '/shop?type=yifu'],
+  ]
+banner_img
+banner_color
+
+--------------------------------------------------------------------------------
